@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ΟΝΟΜΑ Barbershop | Κουρείο στη ΠΟΛΗ</title>
+  <meta name="description" content="Κουρείο στη ΠΟΛΗ: ανδρικό κούρεμα, περιποίηση γενειάδας και πακέτα. Κλείσε ραντεβού online ή τηλεφωνικά.">
+  <link rel="canonical" href="https://www.example.gr/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Open Graph: αλλάζεις τίτλο, περιγραφή και εικόνα (images/share.jpg, 1200x630) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ΟΝΟΜΑ Barbershop | Κουρείο στη ΠΟΛΗ">
+  <meta property="og:description" content="Ανδρικό κούρεμα, περιποίηση γενειάδας και πακέτα. Κλείσε ραντεβού.">
+  <meta property="og:image" content="https://www.example.gr/images/share.jpg">
+  <meta property="og:url" content="https://www.example.gr/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Content Security Policy: ο browser φορτώνει κώδικα μόνο από το ίδιο το site -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured data: ένα μπλοκ ανά κατάστημα. Άλλαξε τα στοιχεία ώστε να ταιριάζουν ΑΚΡΙΒΩΣ με τη σελίδα. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HairSalon",
+        "name": "ΟΝΟΜΑ Barbershop - Κέντρο",
+        "url": "https://www.example.gr/",
+        "image": "https://www.example.gr/images/share.jpg",
+        "telephone": "+302100000000",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Οδός 1",
+          "addressLocality": "ΠΟΛΗ",
+          "postalCode": "00000",
+          "addressCountry": "GR"
+        },
+        "openingHours": ["Mo-Fr 10:00-21:00", "Sa 10:00-17:00"],
+        "sameAs": ["https://www.instagram.com/ONOMA"]
+      },
+      {
+        "@type": "HairSalon",
+        "name": "ΟΝΟΜΑ Barbershop - Βόρεια",
+        "url": "https://www.example.gr/",
+        "image": "https://www.example.gr/images/share.jpg",
+        "telephone": "+302100000001",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Οδός 2",
+          "addressLocality": "ΠΟΛΗ",
+          "postalCode": "00000",
+          "addressCountry": "GR"
+        },
+        "openingHours": ["Mo-Fr 10:00-21:00", "Sa 10:00-17:00"],
+        "sameAs": ["https://www.instagram.com/ONOMA"]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="ΟΝΟΜΑ Barbershop, αρχική">ΟΝΟΜΑ<span>Barbershop</span></a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Μενού">
+        <span class="menu-bars" aria-hidden="true"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Κύριο μενού">
+        <ul>
+          <li><a href="#services">Υπηρεσίες</a></li>
+          <li><a href="#locations">Καταστήματα</a></li>
+          <li><a href="#crew">Η ομάδα</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Επικοινωνία</a></li>
+        </ul>
+        <a class="btn btn-primary nav-cta" href="#booking">Κλείσε ραντεβού</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 1. HERO -->
+    <section id="top" class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">Κουρείο στη ΠΟΛΗ</p>
+        <h1>Το κούρεμα που σου ταιριάζει.</h1>
+        <p class="hero-text">Ακριβές κούρεμα, περιποιημένη γενειάδα και χρόνος για σένα. Κλείσε ραντεβού σε λίγα δευτερόλεπτα.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#booking">Κλείσε ραντεβού</a>
+          <a class="btn btn-ghost" href="tel:+302100000000">Κάλεσέ μας</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ΥΠΗΡΕΣΙΕΣ ΚΑΙ ΤΙΜΕΣ -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Υπηρεσίες και τιμές</h2>
+        <p class="section-lead">Καθαρές τιμές, χωρίς εκπλήξεις.</p>
+        <div class="grid grid-3">
+          <article class="card reveal">
+            <h3>Ανδρικό κούρεμα</h3>
+            <p>Προσωπικό κούρεμα με πλύσιμο και styling.</p>
+            <p class="price">12€ <span>30 λεπτά</span></p>
+          </article>
+          <article class="card reveal">
+            <h3>Γενειάδα</h3>
+            <p>Σχήμα, περίγραμμα και περιποίηση με ζεστή πετσέτα.</p>
+            <p class="price">8€ <span>20 λεπτά</span></p>
+          </article>
+          <article class="card card-featured reveal">
+            <h3>Κούρεμα και γενειάδα</h3>
+            <p>Το πλήρες πακέτο σε ένα ραντεβού.</p>
+            <p class="price">18€ <span>45 λεπτά</span></p>
+          </article>
+        </div>
+        <p class="note">Οι τιμές είναι ενδεικτικές. Αντικατάστησέ τες με τις πραγματικές.</p>
+      </div>
+    </section>
+
+    <!-- 3. ΚΑΤΑΣΤΗΜΑΤΑ -->
+    <section id="locations" class="section section-alt">
+      <div class="container">
+        <h2>Τα καταστήματά μας</h2>
+        <div class="grid grid-2">
+          <article class="card reveal">
+            <h3>Κέντρο</h3>
+            <p>Οδός 1, ΠΟΛΗ, 00000</p>
+            <p>Δευτέρα έως Παρασκευή 10:00-21:00<br>Σάββατο 10:00-17:00</p>
+            <p><a class="link-strong" href="tel:+302100000000">210 000 0000</a></p>
+            <p><a href="https://maps.google.com/?q=Οδός+1+ΠΟΛΗ" target="_blank" rel="noopener noreferrer">Άνοιγμα στον χάρτη</a></p>
+          </article>
+          <article class="card reveal">
+            <h3>Βόρεια</h3>
+            <p>Οδός 2, ΠΟΛΗ, 00000</p>
+            <p>Δευτέρα έως Παρασκευή 10:00-21:00<br>Σάββατο 10:00-17:00</p>
+            <p><a class="link-strong" href="tel:+302100000001">210 000 0001</a></p>
+            <p><a href="https://maps.google.com/?q=Οδός+2+ΠΟΛΗ" target="_blank" rel="noopener noreferrer">Άνοιγμα στον χάρτη</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ΟΜΑΔΑ -->
+    <section id="crew" class="section">
+      <div class="container">
+        <h2>Η ομάδα</h2>
+        <div class="grid grid-3">
+          <article class="card reveal"><h3>Όνομα 1</h3><p>Κούρεμα και fade.</p></article>
+          <article class="card reveal"><h3>Όνομα 2</h3><p>Γενειάδα και περιποίηση.</p></article>
+          <article class="card reveal"><h3>Όνομα 3</h3><p>Κλασικά κουρέματα.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. GALLERY: αντικατάστησε τα κουτιά με <img src="images/work-1.jpg" alt="Περιγραφή" width="600" height="600" loading="lazy"> -->
+    <section id="gallery" class="section section-alt">
+      <div class="container">
+        <h2>Δουλειές μας</h2>
+        <div class="gallery">
+          <div class="gallery-item reveal" role="img" aria-label="Φωτογραφία δουλειάς 1"></div>
+          <div class="gallery-item reveal" role="img" aria-label="Φωτογραφία δουλειάς 2"></div>
+          <div class="gallery-item reveal" role="img" aria-label="Φωτογραφία δουλειάς 3"></div>
+          <div class="gallery-item reveal" role="img" aria-label="Φωτογραφία δουλειάς 4"></div>
+          <div class="gallery-item reveal" role="img" aria-label="Φωτογραφία δουλειάς 5"></div>
+          <div class="gallery-item reveal" role="img" aria-label="Φωτογραφία δουλειάς 6"></div>
+        </div>
+        <p class="section-lead">
+          <a href="https://www.instagram.com/ONOMA" target="_blank" rel="noopener noreferrer">Δες περισσότερα στο Instagram</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- 6. ΚΡΙΤΙΚΕΣ -->
+    <section class="section">
+      <div class="container center">
+        <h2>Τι λένε οι πελάτες μας</h2>
+        <p class="section-lead">Διάβασε τις κριτικές μας στο Google.</p>
+        <a class="btn btn-ghost" href="https://g.page/ONOMA/review" target="_blank" rel="noopener noreferrer">Δες τις κριτικές</a>
+      </div>
+    </section>
+
+    <!-- 7. ΚΡΑΤΗΣΗ -->
+    <section id="booking" class="section section-alt">
+      <div class="container narrow">
+        <h2>Κλείσε ραντεβού</h2>
+        <p class="section-lead">Συμπλήρωσε τη φόρμα και θα ανοίξει το WhatsApp με έτοιμο μήνυμα. Θα σου επιβεβαιώσουμε την ώρα.</p>
+
+        <form id="booking-form" novalidate>
+          <label for="name">Όνομα</label>
+          <input id="name" name="name" type="text" maxlength="60" autocomplete="name" required>
+
+          <label for="service">Υπηρεσία</label>
+          <select id="service" name="service" required>
+            <option value="">Διάλεξε...</option>
+            <option>Ανδρικό κούρεμα</option>
+            <option>Γενειάδα</option>
+            <option>Κούρεμα και γενειάδα</option>
+          </select>
+
+          <label for="shop">Κατάστημα</label>
+          <select id="shop" name="shop" required>
+            <option value="">Διάλεξε...</option>
+            <option>Κέντρο</option>
+            <option>Βόρεια</option>
+          </select>
+
+          <label for="date">Ημερομηνία</label>
+          <input id="date" name="date" type="date" required>
+
+          <label for="time">Ώρα</label>
+          <input id="time" name="time" type="time" required>
+
+          <button class="btn btn-primary btn-block" type="submit">Συνέχεια στο WhatsApp</button>
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="note">Προτιμάς τηλέφωνο; <a class="link-strong" href="tel:+302100000000">Κάλεσέ μας στο 210 000 0000</a>.</p>
+      </div>
+    </section>
+
+    <!-- 8. ΕΠΙΚΟΙΝΩΝΙΑ -->
+    <section id="contact" class="section">
+      <div class="container center">
+        <h2>Επικοινωνία</h2>
+        <p class="section-lead">Έχεις ερωτήσεις; Μίλα μαζί μας.</p>
+        <a class="btn btn-primary" href="tel:+302100000000">Κάλεσέ μας</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="logo">ΟΝΟΜΑ<span>Barbershop</span></p>
+        <p>Κουρείο στη ΠΟΛΗ.</p>
+      </div>
+      <div>
+        <h3>Καταστήματα</h3>
+        <p>Κέντρο: Οδός 1, <a href="tel:+302100000000">210 000 0000</a></p>
+        <p>Βόρεια: Οδός 2, <a href="tel:+302100000001">210 000 0001</a></p>
+      </div>
+      <div>
+        <h3>Ωράριο</h3>
+        <p>Δευτέρα έως Παρασκευή 10:00-21:00</p>
+        <p>Σάββατο 10:00-17:00</p>
+      </div>
+      <div>
+        <h3>Ακολούθησέ μας</h3>
+        <p><a href="https://www.instagram.com/ONOMA" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+        <p><a href="privacy.html">Πολιτική απορρήτου</a></p>
+      </div>
+    </div>
+    <p class="copyright">© <span id="year">2025</span> ΟΝΟΜΑ Barbershop. Με επιφύλαξη παντός δικαιώματος.</p>
+  </footer>
+
+  <!-- Μπάρα κλήσης και κράτησης για κινητό -->
+  <div class="mobile-cta" aria-label="Γρήγορες ενέργειες">
+    <a class="btn btn-ghost" href="tel:+302100000000">Κλήση</a>
+    <a class="btn btn-primary" href="#booking">Ραντεβού</a>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
