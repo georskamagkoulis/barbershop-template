@@ -2,23 +2,27 @@
 <html lang="el">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ΟΝΟΜΑ Barbershop | Κουρείο στη ΠΟΛΗ</title>
-  <meta name="description" content="Κουρείο στη ΠΟΛΗ: ανδρικό κούρεμα, περιποίηση γενειάδας και πακέτα. Κλείσε ραντεβού online ή τηλεφωνικά.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SALA Barber Shop | Κουρείο στη ΠΟΛΗ</title>
+  <meta name="description" content="SALA Barber Shop, κουρείο στη ΠΟΛΗ: ανδρικό κούρεμα, περιποίηση γενειάδας και πακέτα. Κλείσε ραντεβού online ή τηλεφωνικά.">
+  <meta name="theme-color" content="#0b0b0b">
   <link rel="canonical" href="https://www.example.gr/">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-  <!-- Open Graph: αλλάζεις τίτλο, περιγραφή και εικόνα (images/share.jpg, 1200x630) -->
+  <!-- Open Graph: αλλάζεις εικόνα (images/share.jpg, 1200x630) και domain -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="ΟΝΟΜΑ Barbershop | Κουρείο στη ΠΟΛΗ">
+  <meta property="og:title" content="SALA Barber Shop | Κουρείο στη ΠΟΛΗ">
   <meta property="og:description" content="Ανδρικό κούρεμα, περιποίηση γενειάδας και πακέτα. Κλείσε ραντεβού.">
   <meta property="og:image" content="https://www.example.gr/images/share.jpg">
   <meta property="og:url" content="https://www.example.gr/">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Content Security Policy: ο browser φορτώνει κώδικα μόνο από το ίδιο το site -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self' https://api.cal.com; object-src 'none'; base-uri 'self'; form-action 'self'">
 
+  <!-- Προφόρτωση των γραμματοσειρών του λογότυπου και των τίτλων -->
+  <link rel="preload" href="fonts/cinzel-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/eb-garamond-greek-600-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
 
   <!-- Structured data: ένα μπλοκ ανά κατάστημα. Άλλαξε τα στοιχεία ώστε να ταιριάζουν ΑΚΡΙΒΩΣ με τη σελίδα. -->
@@ -28,7 +32,7 @@
     "@graph": [
       {
         "@type": "HairSalon",
-        "name": "ΟΝΟΜΑ Barbershop - Κέντρο",
+        "name": "SALA Barber Shop - Κέντρο",
         "url": "https://www.example.gr/",
         "image": "https://www.example.gr/images/share.jpg",
         "telephone": "+302100000000",
@@ -44,7 +48,7 @@
       },
       {
         "@type": "HairSalon",
-        "name": "ΟΝΟΜΑ Barbershop - Βόρεια",
+        "name": "SALA Barber Shop - Βόρεια",
         "url": "https://www.example.gr/",
         "image": "https://www.example.gr/images/share.jpg",
         "telephone": "+302100000001",
@@ -63,11 +67,39 @@
   </script>
 </head>
 <body>
+  <!-- Σύμβολα SVG: λογότυπο, «σπαθί» και εικονίδια. Χρησιμοποιούνται με <use href="#..."> -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <!-- Λογότυπο SALA: προσέγγιση της κάρτας. Αν έχεις το πρωτότυπο αρχείο λογότυπου, αντικατέστησέ το εδώ. -->
+    <symbol id="logo-sala" viewBox="0 0 1180 320">
+      <path fill="currentColor" d="M0 196C82 148 205 136 336 266 236 184 124 188 0 236Z"/>
+      <path fill="currentColor" d="M45 92 604 218 556 182 704 304 582 250Z"/>
+      <text x="586" y="246" fill="currentColor" font-family="Cinzel, Georgia, serif" font-weight="700" font-size="232">S</text>
+      <text x="748" y="246" fill="currentColor" font-family="Cinzel, Georgia, serif" font-weight="700" font-size="176" letter-spacing="4">ALA</text>
+      <text x="1122" y="296" fill="currentColor" text-anchor="end" font-family="EB Garamond, Georgia, serif" font-weight="600" font-size="54" letter-spacing="5">BARBER SHOP</text>
+    </symbol>
+    <symbol id="swoosh" viewBox="0 0 150 22">
+      <path fill="currentColor" d="M0 19 112 7 101 1 150 0 114 12Z"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.6a2.6 2.6 0 1 1 0-5.2 2.6 2.6 0 0 1 0 5.2Z"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1Z"/>
+    </symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="17.4" cy="6.6" r="1.25" fill="currentColor"/>
+    </symbol>
+  </svg>
+
   <a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#top" aria-label="ΟΝΟΜΑ Barbershop, αρχική">ΟΝΟΜΑ<span>Barbershop</span></a>
+      <a class="logo" href="#top" aria-label="SALA Barber Shop, αρχική">
+        <svg class="logo-svg" viewBox="0 0 1180 320" aria-hidden="true" focusable="false"><use href="#logo-sala"/></svg>
+      </a>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Μενού">
         <span class="menu-bars" aria-hidden="true"></span>
@@ -87,8 +119,13 @@
   </header>
 
   <main id="main">
-    <!-- 1. HERO -->
-    <section id="top" class="hero">
+    <!-- 1. HERO: ίδια διάταξη με την κάρτα (λογότυπο πάνω δεξιά, μαύρο προς λευκό) -->
+    <section id="top" class="hero grain">
+      <div class="container">
+        <div class="hero-logo">
+          <svg class="logo-svg" viewBox="0 0 1180 320" role="img" aria-label="SALA Barber Shop"><use href="#logo-sala"/></svg>
+        </div>
+      </div>
       <div class="container hero-content">
         <p class="eyebrow">Κουρείο στη ΠΟΛΗ</p>
         <h1>Το κούρεμα που σου ταιριάζει.</h1>
@@ -97,13 +134,21 @@
           <a class="btn btn-primary" href="#booking">Κλείσε ραντεβού</a>
           <a class="btn btn-ghost" href="tel:+302100000000">Κάλεσέ μας</a>
         </div>
+        <div class="hero-contacts">
+          <a class="icon-badge" href="#locations" aria-label="Διευθύνσεις καταστημάτων"><svg aria-hidden="true"><use href="#i-pin"/></svg></a>
+          <a class="icon-badge" href="tel:+302100000000" aria-label="Τηλέφωνο 210 000 0000"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
+          <a class="icon-badge" href="https://www.instagram.com/ONOMA" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-insta"/></svg></a>
+        </div>
       </div>
     </section>
 
     <!-- 2. ΥΠΗΡΕΣΙΕΣ ΚΑΙ ΤΙΜΕΣ -->
     <section id="services" class="section">
       <div class="container">
-        <h2>Υπηρεσίες και τιμές</h2>
+        <div class="section-title">
+          <h2>Υπηρεσίες και τιμές</h2>
+          <svg class="swoosh" aria-hidden="true" focusable="false"><use href="#swoosh"/></svg>
+        </div>
         <p class="section-lead">Καθαρές τιμές, χωρίς εκπλήξεις.</p>
         <div class="grid grid-3">
           <article class="card reveal">
@@ -127,23 +172,28 @@
     </section>
 
     <!-- 3. ΚΑΤΑΣΤΗΜΑΤΑ -->
-    <section id="locations" class="section section-alt">
+    <section id="locations" class="section theme-dark grain">
       <div class="container">
-        <h2>Τα καταστήματά μας</h2>
+        <div class="section-title">
+          <h2>Τα καταστήματά μας</h2>
+          <svg class="swoosh" aria-hidden="true" focusable="false"><use href="#swoosh"/></svg>
+        </div>
         <div class="grid grid-2">
           <article class="card reveal">
             <h3>Κέντρο</h3>
-            <p>Οδός 1, ΠΟΛΗ, 00000</p>
+            <p class="icon-line"><span class="icon-badge"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>
+              <a href="https://maps.google.com/?q=Οδός+1+ΠΟΛΗ" target="_blank" rel="noopener noreferrer">Οδός 1, ΠΟΛΗ, 00000</a></p>
+            <p class="icon-line"><span class="icon-badge"><svg aria-hidden="true"><use href="#i-phone"/></svg></span>
+              <a href="tel:+302100000000">210 000 0000</a></p>
             <p>Δευτέρα έως Παρασκευή 10:00-21:00<br>Σάββατο 10:00-17:00</p>
-            <p><a class="link-strong" href="tel:+302100000000">210 000 0000</a></p>
-            <p><a href="https://maps.google.com/?q=Οδός+1+ΠΟΛΗ" target="_blank" rel="noopener noreferrer">Άνοιγμα στον χάρτη</a></p>
           </article>
           <article class="card reveal">
             <h3>Βόρεια</h3>
-            <p>Οδός 2, ΠΟΛΗ, 00000</p>
+            <p class="icon-line"><span class="icon-badge"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>
+              <a href="https://maps.google.com/?q=Οδός+2+ΠΟΛΗ" target="_blank" rel="noopener noreferrer">Οδός 2, ΠΟΛΗ, 00000</a></p>
+            <p class="icon-line"><span class="icon-badge"><svg aria-hidden="true"><use href="#i-phone"/></svg></span>
+              <a href="tel:+302100000001">210 000 0001</a></p>
             <p>Δευτέρα έως Παρασκευή 10:00-21:00<br>Σάββατο 10:00-17:00</p>
-            <p><a class="link-strong" href="tel:+302100000001">210 000 0001</a></p>
-            <p><a href="https://maps.google.com/?q=Οδός+2+ΠΟΛΗ" target="_blank" rel="noopener noreferrer">Άνοιγμα στον χάρτη</a></p>
           </article>
         </div>
       </div>
@@ -152,19 +202,25 @@
     <!-- 4. ΟΜΑΔΑ -->
     <section id="crew" class="section">
       <div class="container">
-        <h2>Η ομάδα</h2>
+        <div class="section-title">
+          <h2>Η ομάδα</h2>
+          <svg class="swoosh" aria-hidden="true" focusable="false"><use href="#swoosh"/></svg>
+        </div>
         <div class="grid grid-3">
-          <article class="card reveal"><h3>Όνομα 1</h3><p>Κούρεμα και fade.</p></article>
-          <article class="card reveal"><h3>Όνομα 2</h3><p>Γενειάδα και περιποίηση.</p></article>
-          <article class="card reveal"><h3>Όνομα 3</h3><p>Κλασικά κουρέματα.</p></article>
+          <article class="card crew-card reveal"><span class="monogram" aria-hidden="true">Ο</span><h3>Όνομα 1</h3><p>Κούρεμα και fade.</p></article>
+          <article class="card crew-card reveal"><span class="monogram" aria-hidden="true">Ο</span><h3>Όνομα 2</h3><p>Γενειάδα και περιποίηση.</p></article>
+          <article class="card crew-card reveal"><span class="monogram" aria-hidden="true">Ο</span><h3>Όνομα 3</h3><p>Κλασικά κουρέματα.</p></article>
         </div>
       </div>
     </section>
 
     <!-- 5. GALLERY: αντικατάστησε τα κουτιά με <img src="images/work-1.jpg" alt="Περιγραφή" width="600" height="600" loading="lazy"> -->
-    <section id="gallery" class="section section-alt">
+    <section id="gallery" class="section theme-dark grain">
       <div class="container">
-        <h2>Δουλειές μας</h2>
+        <div class="section-title">
+          <h2>Δουλειές μας</h2>
+          <svg class="swoosh" aria-hidden="true" focusable="false"><use href="#swoosh"/></svg>
+        </div>
         <div class="gallery">
           <div class="gallery-item reveal" role="img" aria-label="Φωτογραφία δουλειάς 1"></div>
           <div class="gallery-item reveal" role="img" aria-label="Φωτογραφία δουλειάς 2"></div>
@@ -173,65 +229,113 @@
           <div class="gallery-item reveal" role="img" aria-label="Φωτογραφία δουλειάς 5"></div>
           <div class="gallery-item reveal" role="img" aria-label="Φωτογραφία δουλειάς 6"></div>
         </div>
-        <p class="section-lead">
-          <a href="https://www.instagram.com/ONOMA" target="_blank" rel="noopener noreferrer">Δες περισσότερα στο Instagram</a>
-        </p>
+        <a class="btn btn-ghost" href="https://www.instagram.com/ONOMA" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" aria-hidden="true"><use href="#i-insta"/></svg> Δες περισσότερα στο Instagram
+        </a>
       </div>
     </section>
 
     <!-- 6. ΚΡΙΤΙΚΕΣ -->
-    <section class="section">
+    <section class="section section-alt">
       <div class="container center">
-        <h2>Τι λένε οι πελάτες μας</h2>
+        <div class="section-title center">
+          <h2>Τι λένε οι πελάτες μας</h2>
+          <svg class="swoosh" aria-hidden="true" focusable="false"><use href="#swoosh"/></svg>
+        </div>
         <p class="section-lead">Διάβασε τις κριτικές μας στο Google.</p>
         <a class="btn btn-ghost" href="https://g.page/ONOMA/review" target="_blank" rel="noopener noreferrer">Δες τις κριτικές</a>
       </div>
     </section>
 
     <!-- 7. ΚΡΑΤΗΣΗ -->
-    <section id="booking" class="section section-alt">
+    <section id="booking" class="section booking grain">
       <div class="container narrow">
-        <h2>Κλείσε ραντεβού</h2>
-        <p class="section-lead">Συμπλήρωσε τη φόρμα και θα ανοίξει το WhatsApp με έτοιμο μήνυμα. Θα σου επιβεβαιώσουμε την ώρα.</p>
+        <div class="booking-head">
+          <div class="section-title">
+            <h2>Κλείσε ραντεβού</h2>
+            <svg class="swoosh" aria-hidden="true" focusable="false"><use href="#swoosh"/></svg>
+          </div>
+          <p class="section-lead">Διάλεξε υπηρεσία, ημέρα και μία από τις ελεύθερες ώρες. Βλέπεις μόνο ό,τι είναι διαθέσιμο.</p>
+        </div>
 
-        <form id="booking-form" novalidate>
-          <label for="name">Όνομα</label>
-          <input id="name" name="name" type="text" maxlength="60" autocomplete="name" required>
+        <div class="booking-panel">
+          <form id="booking-form" novalidate>
+            <p id="demo-note" class="demo-note" hidden>Λειτουργία δοκιμής: οι ώρες βγαίνουν από το ωράριο και η κράτηση στέλνεται με WhatsApp.</p>
 
-          <label for="service">Υπηρεσία</label>
-          <select id="service" name="service" required>
-            <option value="">Διάλεξε...</option>
-            <option>Ανδρικό κούρεμα</option>
-            <option>Γενειάδα</option>
-            <option>Κούρεμα και γενειάδα</option>
-          </select>
+            <div class="form-row">
+              <div>
+                <label for="service">1. Υπηρεσία</label>
+                <select id="service" name="service" required>
+                  <option value="">Διάλεξε...</option>
+                  <option>Ανδρικό κούρεμα</option>
+                  <option>Γενειάδα</option>
+                  <option>Κούρεμα και γενειάδα</option>
+                </select>
+              </div>
+              <div>
+                <label for="shop">2. Κατάστημα</label>
+                <select id="shop" name="shop" required>
+                  <option value="">Διάλεξε...</option>
+                  <option>Κέντρο</option>
+                  <option>Βόρεια</option>
+                </select>
+              </div>
+            </div>
 
-          <label for="shop">Κατάστημα</label>
-          <select id="shop" name="shop" required>
-            <option value="">Διάλεξε...</option>
-            <option>Κέντρο</option>
-            <option>Βόρεια</option>
-          </select>
+            <fieldset class="slot-group">
+              <legend>3. Ημέρα</legend>
+              <div id="day-list" class="day-strip"></div>
+            </fieldset>
 
-          <label for="date">Ημερομηνία</label>
-          <input id="date" name="date" type="date" required>
+            <fieldset class="slot-group">
+              <legend>4. Ώρα</legend>
+              <div id="hour-list" class="hour-grid"></div>
+              <p id="slot-status" class="slot-status" role="status" aria-live="polite">Διάλεξε υπηρεσία και κατάστημα για να δεις τις ελεύθερες ώρες.</p>
+            </fieldset>
 
-          <label for="time">Ώρα</label>
-          <input id="time" name="time" type="time" required>
+            <label for="name">Όνομα</label>
+            <input id="name" name="name" type="text" maxlength="60" autocomplete="name" required>
 
-          <button class="btn btn-primary btn-block" type="submit">Συνέχεια στο WhatsApp</button>
-          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
-        </form>
+            <div class="form-row">
+              <div>
+                <label for="phone">Τηλέφωνο</label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" maxlength="20" autocomplete="tel" required>
+              </div>
+              <div>
+                <label for="email">Email <span class="label-hint">(για επιβεβαίωση)</span></label>
+                <input id="email" name="email" type="email" inputmode="email" maxlength="100" autocomplete="email">
+              </div>
+            </div>
 
-        <p class="note">Προτιμάς τηλέφωνο; <a class="link-strong" href="tel:+302100000000">Κάλεσέ μας στο 210 000 0000</a>.</p>
+            <button id="booking-submit" class="btn btn-primary btn-block" type="submit">Κλείσε το ραντεβού</button>
+            <p id="form-message" class="form-message" role="alert" aria-live="assertive"></p>
+          </form>
+
+          <div id="booking-done" class="booking-done" tabindex="-1" hidden>
+            <svg class="swoosh" aria-hidden="true" focusable="false"><use href="#swoosh"/></svg>
+            <h3>Το ραντεβού σου καταχωρήθηκε</h3>
+            <p id="done-text"></p>
+            <button id="booking-again" class="btn btn-ghost" type="button">Νέο ραντεβού</button>
+          </div>
+
+          <p class="note">Προτιμάς τηλέφωνο; <a class="link-strong" href="tel:+302100000000">Κάλεσέ μας στο 210 000 0000</a>.</p>
+        </div>
       </div>
     </section>
 
     <!-- 8. ΕΠΙΚΟΙΝΩΝΙΑ -->
-    <section id="contact" class="section">
+    <section id="contact" class="section theme-dark grain">
       <div class="container center">
-        <h2>Επικοινωνία</h2>
+        <div class="section-title center">
+          <h2>Επικοινωνία</h2>
+          <svg class="swoosh" aria-hidden="true" focusable="false"><use href="#swoosh"/></svg>
+        </div>
         <p class="section-lead">Έχεις ερωτήσεις; Μίλα μαζί μας.</p>
+        <div class="contact-icons">
+          <a class="icon-badge" href="#locations" aria-label="Διευθύνσεις καταστημάτων"><svg aria-hidden="true"><use href="#i-pin"/></svg></a>
+          <a class="icon-badge" href="tel:+302100000000" aria-label="Τηλέφωνο 210 000 0000"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
+          <a class="icon-badge" href="https://www.instagram.com/ONOMA" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-insta"/></svg></a>
+        </div>
         <a class="btn btn-primary" href="tel:+302100000000">Κάλεσέ μας</a>
       </div>
     </section>
@@ -240,13 +344,15 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <p class="logo">ΟΝΟΜΑ<span>Barbershop</span></p>
+        <div class="footer-logo">
+          <svg class="logo-svg" viewBox="0 0 1180 320" role="img" aria-label="SALA Barber Shop"><use href="#logo-sala"/></svg>
+        </div>
         <p>Κουρείο στη ΠΟΛΗ.</p>
       </div>
       <div>
         <h3>Καταστήματα</h3>
-        <p>Κέντρο: Οδός 1, <a href="tel:+302100000000">210 000 0000</a></p>
-        <p>Βόρεια: Οδός 2, <a href="tel:+302100000001">210 000 0001</a></p>
+        <p class="icon-line"><span class="icon-badge"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><span>Κέντρο: Οδός 1, <a href="tel:+302100000000">210 000 0000</a></span></p>
+        <p class="icon-line"><span class="icon-badge"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><span>Βόρεια: Οδός 2, <a href="tel:+302100000001">210 000 0001</a></span></p>
       </div>
       <div>
         <h3>Ωράριο</h3>
@@ -255,16 +361,16 @@
       </div>
       <div>
         <h3>Ακολούθησέ μας</h3>
-        <p><a href="https://www.instagram.com/ONOMA" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+        <p class="icon-line"><span class="icon-badge"><svg aria-hidden="true"><use href="#i-insta"/></svg></span><a href="https://www.instagram.com/ONOMA" target="_blank" rel="noopener noreferrer">Instagram</a></p>
         <p><a href="privacy.html">Πολιτική απορρήτου</a></p>
       </div>
     </div>
-    <p class="copyright">© <span id="year">2025</span> ΟΝΟΜΑ Barbershop. Με επιφύλαξη παντός δικαιώματος.</p>
+    <p class="copyright">© <span id="year">2026</span> SALA Barber Shop. Με επιφύλαξη παντός δικαιώματος.</p>
   </footer>
 
   <!-- Μπάρα κλήσης και κράτησης για κινητό -->
   <div class="mobile-cta" aria-label="Γρήγορες ενέργειες">
-    <a class="btn btn-ghost" href="tel:+302100000000">Κλήση</a>
+    <a class="btn btn-ghost" href="tel:+302100000000"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Κλήση</a>
     <a class="btn btn-primary" href="#booking">Ραντεβού</a>
   </div>
 
